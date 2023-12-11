@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iEvade</title>
+    <style>
+        body {
+            background: #040404;
+            color: #fff;
+            text-align: left;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            margin-left: 1vw;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        #content {
+            display: flex;
+            height: 100vh;
+            align-items: center;
+        }
+
+        h1 {
+            font-size: 2em;
+            animation: rainbowAnimation 2s linear infinite;
+        }
+
+        @keyframes rainbowAnimation {
+            0% {
+                color: violet;
+            }
+            12.5% {
+                color: indigo;
+            }
+            25% {
+                color: blue;
+            }
+            37.5% {
+                color: green;
+            }
+            50% {
+                color: yellow;
+            }
+            62.5% {
+                color: orange;
+            }
+            75% {
+                color: red;
+            }
+        }
+        
+        #dropdown {
+            padding: 5px;
+            font-size: 16px;
+        }
+
+        button {
+            background-color: #white;
+            color: black;
+            padding: 5px 5px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .info {
+            display: none;
+        }
+
+        .info.show {
+            display: block;
+        }
+
+        .hovr {
+            cursor: pointer;
+        }
+
+        footer {
+            position: fixed;
+            top: 95vh;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="content">
+        <div class="container">
+        <h1>iEvade</h1>
+        <p> 
+            <select id="dropdown" onclick="toggleInfo()" onkeyup="handleEnterKey(event)">
+                <option value="nebula">Nebula</option>
+                <option value="rammerhead">Rammerhead</option>
+                <option value="womginx">Womginx</option>
+            </select>
+            <button onclick="redirectToLink()" onkeyup="handleEnterKey(event)">Go!</button>
+        </p>
+
+        <div id="nebula-info" class="info show">
+            <p>Nebula is an easy proxy that supports most sites.</p>
+        </div>
+        <div id="rammerhead-info" class="info">
+            <p>Rammerhead is a sub-browser proxy with cookie support.</p>
+        </div>
+        <div id="womginx-info" class="info">
+            <p>Womginx is a NGINX reverse proxy that requires more skill to operate.</p>
+        </div>
+          <iframe data-aa='2284871' src='//ad.a-ads.com/2284871?size=728x90' style='width:728px; height:90px; border:0px; padding:0; overflow:hidden; background-color: transparent;'></iframe>
+            </div>
+    </div>
+
+
+    <footer>
+        &copy; iEvade by PythonScratcher & g1gabyteDEV</a>
+    </footer>
+
+    <script>
+        function toggleInfo() {
+            var selectedValue = document.getElementById("dropdown").value;
+            var infoElement = document.getElementById(selectedValue + "-info");
+
+
+            infoElement.classList.toggle("show");
+        }
+
+        function redirectToLink() {
+            var selectedValue = document.getElementById("dropdown").value;
+            var links = {
+                nebula: "https://google-1.pythonscratcher.repl.co",
+                rammerhead: "https://signup.qiix.eu.org",
+                womginx: "https://prxy.qiix.eu.org",
+            };
+
+            window.location.href = links[selectedValue];
+        }
+
+        function handleEnterKey(event) {
+            if (event.key === "Enter") {
+                redirectToLink();
+            }
+        }
+    </script>
+
+</body>
+</html>
