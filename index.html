@@ -1,91 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>iEvade</title>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5805720950950790"
          crossorigin="anonymous"></script>
-    <title>iEvade Cyberbullying</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-        }
+  <link rel="icon" href="IEVADE.png">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Afacad&display=swap');
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Univers,'Afacad',sans-serif;
+    }
+    body {
+     text-align: center;
+      background: #040404;
+      color: #fff;
+      
+    }
 
-        header {
-            text-align: center;
-            padding: 20px;
-            background-color: #3498db;
-            color: #fff;
-        }
+    #content {
+    
+      display: flex;
+      height: 100vh;
+      align-items: center;
+      justify-content: center;
+    }
 
-        section {
-            margin: 20px 0;
-        }
+    h1 {
+      font-size: 2em;
+      animation: rainbowAnimation 2s linear infinite;
+    }
 
-        h2 {
-            color: #3498db;
-        }
+    @keyframes rainbowAnimation {
+      0% {
+        color: violet;
+      }
+      12.5% {
+        color: indigo;
+      }
+      25% {
+        color: blue;
+      }
+      37.5% {
+        color: green;
+      }
+      50% {
+        color: yellow;
+      }
+      62.5% {
+        color: orange;
+      }
+      75% {
+        color: red;
+      }
+    }
+    
+    #dropdown {
+      padding: 5px;
+      font-size: 16px;
+    }
 
-        p {
-            line-height: 1.6;
-        }
+    button {
+      background-color: #white;
+      color: black;
+      padding: 5px 5px;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+    }
 
-        footer {
-            text-align: center;
-            padding: 10px;
-            background-color: #3498db;
-            color: #fff;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-    </style>
+    button:hover {
+      background-color: #45a049;
+    }
+
+    .info {
+      display: none;
+    }
+
+    .info.show {
+      display: block;
+    }
+
+    .hovr {
+      cursor: pointer;
+    }
+
+    .titl {
+     font-size: 5em;
+    }
+
+    footer {
+      position: fixed;
+      top: 95vh;
+    }
+    .stars {
+      background: url(galaxy.jpg);
+      background-size: 100%;
+      position: fixed;
+      top: 0; left: 0;
+      height: 100vh;
+      width: 100vw;
+      z-index: -1242342344243243;
+    }
+    .ievade-grid {
+      display: grid;
+      grid-template: '1fr 1fr' 100vh;
+      grid-auto-flow: dense;
+      width: 110vw;
+      position: fixed; left: 0; top: 0;
+      transform: scale(0.9);
+      z-index: -5032050295;
+    }
+ 
+  </style>
 </head>
 <body>
+  <div class="stars"></div>
+  <div id="content">
+    <div class="container">
+    <h1 class="titl">iEvade</h1>
+    <p> 
+      <select id="dropdown" onclick="toggleInfo()" onkeyup="handleEnterKey(event)">
+        <option value="nebula">Nebula</option>
+        <option value="rammerhead">Rammerhead</option>
+        <option value="womginx">Womginx</option>
+      </select>
+      <button onclick="redirectToLink()" onkeyup="handleEnterKey(event)">Go!</button>
+    </p>
 
-    <header>
-        <h1>iEvade Cyberbullying</h1>
-        <p>Your guide to online safety</p>
-    </header>
+    <div id="nebula-info" class="info show">
+      <p></p>
+    </div>
+    <div id="rammerhead-info" class="info">
+      <p></p>
+    </div>
+    <div id="womginx-info" class="info">
+      <p></p>
+    </div>
+     <br>
+    <br>
+     <iframe data-aa='2284871' src='//ad.a-ads.com/2284871?size=728x90' style='width:728px; height:90px; border:0px; padding:0; overflow:hidden; background-color: transparent;'></iframe>
+      </div>
+  </div>
+  <div class="ievade-grid">
+    <div></div>
+    <div class="ievade-ship"></div>
+  </div>
+  
 
-    <section>
-        <h2>Online Safety Tips</h2>
-        <p>Stay safe online by following these tips:</p>
-        <ul>
-            <li>Use strong and unique passwords for your accounts.</li>
-            <li>Be cautious about sharing personal information online.</li>
-            <li>Regularly update your software and antivirus programs.</li>
-            <li>Use secure and reputable websites for online transactions.</li>
-            <li>Enable two-factor authentication when possible.</li>
-        </ul>
-    </section>
 
-    <section>
-        <h2>Cyberbullying Awareness</h2>
-        <p>Learn about cyberbullying and how to prevent it:</p>
-        <ul>
-            <li>Be aware of online behaviors that may constitute cyberbullying.</li>
-            <li>Report and block individuals engaging in cyberbullying.</li>
-            <li>Encourage open communication with friends and family about online experiences.</li>
-            <li>Teach others about the impact of cyberbullying on mental health.</li>
-        </ul>
-    </section>
+  <footer>
+    &copy; iEvade by PythonScratcher & g1gabyteDEV</a>
+  </footer>
 
-    <section>
-        <h2>Grooming Prevention</h2>
-        <p>Protect yourself from online grooming with these tips:</p>
-        <ul>
-            <li>Be cautious when sharing personal information with strangers online.</li>
-            <li>Keep your social media profiles private and carefully manage friend requests.</li>
-            <li>Educate yourself and others about the tactics used by online groomers.</li>
-            <li>Report suspicious behavior to the appropriate authorities.</li>
-        </ul>
-    </section>
+  <script>
+    function toggleInfo() {
+      var selectedValue = document.getElementById("dropdown").value;
+      var infoElement = document.getElementById(selectedValue + "-info");
 
-    <footer>
-        <p>&copy; 2023 iEvade Cyberbullying. All rights reserved.</p>
-    </footer>
+
+      infoElement.classList.toggle("show");
+    }
+
+    function redirectToLink() {
+      var selectedValue = document.getElementById("dropdown").value;
+      var links = {
+        nebula: "https://google-1.pythonscratcher.repl.co",
+        rammerhead: "https://signup.qiix.eu.org",
+        womginx: "https://prxy.qiix.eu.org",
+      };
+
+      window.location.href = links[selectedValue];
+    }
+
+    function handleEnterKey(event) {
+      if (event.key === "Enter") {
+        redirectToLink();
+      }
+    }
+  </script>
 
 </body>
 </html>
