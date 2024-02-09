@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>iEvade: Best Proxies</title>
+   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5805720950950790"
+       crossorigin="anonymous"></script>
+  <link rel="icon" href="https://avatars.githubusercontent.com/u/153400134">
+  <style>
+   @import url('https://fonts.googleapis.com/css2?family=Afacad&display=swap');
+   * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family: Univers,'Afacad',sans-serif;
+   }-
+   body {
+      overflow: clip;
+      text-align: center;
+      background: #040404;
+     color: #fff;
+     
+   }
+
+   #content {
+   
+     display: flex;
+     height: 100vh;
+     align-items: center;
+     justify-content: center;
+   }
+
+   h1 {
+     font-size: 2em;
+    
+   }
+    .rainbow {
+   
+    }
+
+    .cntr {
+      text-align: center;
+    }
+
+    /* Animation for rainbow text */
+    @keyframes rainbow {
+      0% {
+        background-position: 0%;
+      }
+      100% {
+        background-position: 400%;
+      }
+    }
+
+   @keyframes rainbowAnimation {
+     0% {
+      color: violet;
+     }
+     12.5% {
+      color: indigo;
+     }
+     25% {
+      color: blue;
+     }
+     37.5% {
+      color: green;
+     }
+     50% {
+      color: yellow;
+     }
+     62.5% {
+      color: orange;
+     }
+     75% {
+      color: red;
+     }
+   }
+   
+   #dropdown {
+     padding: 5px;
+     font-size: 16px;
+     tcenterign: center;
+   }
+
+   button {
+     background-color: #white;
+     color: black;
+     padding: 5px 5px;
+     font-size: 16px;
+     border: none;
+     cursor: pointer;
+   }
+
+   button:hover {
+     background-color: #45a049;
+   }
+
+   .info {
+     display: none;
+   }
+
+   .info.show {
+     display: block;
+   }
+
+   .hovr {
+     cursor: pointer;
+   }
+
+   .titl {
+     text-align: center;
+    font-size: 5em;
+     background-image: linear-gradient(to right, blue, indigo, violet, indigo, blue);
+     background-size: 400%;
+     -webkit-background-clip: text;
+     background-clip: text;
+     -webkit-text-fill-color: transparent;
+     animation: rainbow 30s linear infinite;
+   }
+
+   footer {
+     position: fixed;
+     top: 95vh;
+   }
+   .stars {
+     background: url(galaxy.jpg);
+     background-size: 100%;
+     position: fixed;
+     top: 0; left: 0;
+     height: 100vh;
+     width: 100vw;
+     z-index: -1242342344243243;
+   }
+   .ievade-grid {
+     display: grid;
+     grid-template: '1fr 1fr' 100vh;
+     grid-auto-flow: dense;
+     width: 110vw;
+     position: fixed; left: 0; top: 0;
+     transform: scale(0.9);
+     z-index: -5032050295;
+   }
+ 
+  </style>
+</head>
+<body>
+  <div class="stars"></div>
+  <div id="content">
+   <div class="container">
+   <h1 class="titl">iEvade</h1>
+   <p class="cntr"> 
+     <select id="dropdown" onclick="toggleInfo()" onkeyup="handleEnterKey(event)">
+      <option value="nebula">Nebula</option>
+      <option value="rammerhead">Rammerhead</option>
+      <option value="womginx">Womginx</option>
+     </select>
+     <button onclick="redirectToLink()" onkeyup="handleEnterKey(event)">Go!</button>
+   </p>
+
+   <div id="nebula-info" class="info show">
+     <p></p>
+   </div>
+   <div id="rammerhead-info" class="info">
+     <p></p>
+   </div>
+   <div id="womginx-info" class="info">
+     <p></p>
+   </div>
+    <br>
+   <br>
+    <iframe data-aa='2298490' src='//ad.a-ads.com/2298490?size=728x90' style='width:728px; height:90px; border:0px; padding:0; overflow:hidden; background-color: transparent;'></iframe>
+     </div>
+  </div>
+  <div class="ievade-grid">
+   <div></div>
+   <div class="ievade-ship"></div>
+  </div>
+  
+
+
+  <footer>
+   &copy; iEvade by PythonScratcher & g1gabyteDEV</a>
+  </footer>
+
+  <script>
+   function toggleInfo() {
+     var selectedValue = document.getElementById("dropdown").value;
+     var infoElement = document.getElementById(selectedValue + "-info");
+
+
+     infoElement.classList.toggle("show");
+   }
+
+   function redirectToLink() {
+     var selectedValue = document.getElementById("dropdown").value;
+     var links = {
+      nebula: "https://n.sch.uk.eu.org",
+      rammerhead: "https://signup.qiix.eu.org",
+      womginx: "https://prxy.qiix.eu.org",
+     };
+
+     window.location.href = links[selectedValue];
+   }
+
+   function handleEnterKey(event) {
+     if (event.key === "Enter") {
+      redirectToLink();
+     }
+   }
+  </script>
+
+</body>
+</html>
