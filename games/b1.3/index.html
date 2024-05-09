@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iEvade Games</title>
+    <link rel="stylesheet" href="https://unpkg.com/xp.css">
+    <style>
+        /* Your existing CSS styles */
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            background-color: #1c1c1c;
+            background-image: url("https://cdn.glitch.global/6c63a2ce-ab33-4ed0-811e-26114e497ac5/bliss.png");
+            background-size: cover; /* Adjust to cover the whole element */
+            background-position: center; /* Center the image */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container {
+            text-align: center;
+            border: 1px solid #000;
+            border-radius: 5px;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+        }
+        h1 {
+            color: #000;
+            margin-top: 0;
+        }
+        .btn {
+            margin: 10px;
+            padding: 10px 20px;
+            background-color: #00ffff;
+            color: #000;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .btn:hover {
+            background-color: #00cccc;
+        }
+        .title-bar {
+            background-color: #008080;
+            padding: 5px;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .title-bar-text {
+            color: #fff;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .title-bar-controls button {
+            width: 20px;
+            height: 20px;
+            margin-left: 5px;
+            background-color: transparent;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .title-bar-controls button:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+        /* Additional style for draggable window */
+        .window {
+            position: absolute;
+            cursor: move;
+        }
+    </style>
+</head>
+<body>
+    <div class="window" id="ievade-window" style="width: 500px;">
+        <div class="title-bar">
+            <div class="title-bar-text">iEvade Games - Public Beta v1.3</div>
+            <div class="title-bar-controls">
+              <button aria-label="Help" onclick="credits()"></button>
+                <button aria-label="Close" onclick="closeWindow()"></button>
+              
+            </div>
+        </div>
+        <div class="window-body">
+            <p>Free unblocked games!</p>
+          <p>
+            This is in beta, expect bugs. and stuff not working. <a href="https://discord.gg/WdrwRSptYz">Join the discord</a> to report anything wrong, blocked games and suggestions :D
+          </p>
+            <br>
+            <br>
+            <br>
+            <a href="/minecraft.html"><button>Minecraft</button></a>
+            <a href="/cr.html"><button>Cluster Rush</button></a>
+            <a href="/1v1.html"><button>1v1.lol</button></a>
+            <a href="/sr.html"><button>Slow Roads</button></a>
+          <a href="/2048.html"><button>2048</button></a>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript for dragging the window
+        var isDragging = false;
+        var offset = { x: 0, y: 0 };
+
+        var windowElement = document.getElementById('ievade-window');
+
+        windowElement.addEventListener('mousedown', function (event) {
+            isDragging = true;
+            offset.x = event.clientX - windowElement.getBoundingClientRect().left;
+            offset.y = event.clientY - windowElement.getBoundingClientRect().top;
+        });
+
+        window.addEventListener('mousemove', function (event) {
+            if (isDragging) {
+                windowElement.style.left = (event.clientX - offset.x) + 'px';
+                windowElement.style.top = (event.clientY - offset.y) + 'px';
+            }
+        });
+
+        window.addEventListener('mouseup', function () {
+            isDragging = false;
+        });
+
+        function closeWindow() {
+            alert("nuh uh");
+        }
+              function credits() {
+            alert("All games are hosted or affilated with iEvade and checked.");
+        }
+    </script>
+</body>
+</html>
