@@ -60,17 +60,28 @@
 <body>
     <div class="container">
         <h1>User Account Generator</h1>
-        <button id="generateBtn">Generate Account</button>
+        <form id="generateForm">
+            <label for="username">Username (optional):</label><br>
+            <input type="text" id="username" name="user"><br><br>
+            <label for="password">Password (optional):</label><br>
+            <input type="password" id="password" name="pass"><br><br>
+            <button type="submit">Generate Account</button>
+        </form>
         <div class="result" id="resultDiv">
-            <p id="username">Username: <span id="usernameValue"></span></p>
-            <p id="password">Password: <span id="passwordValue"></span></p>
+            <p id="usernameLabel">Username: <span id="usernameValue"></span></p>
+            <p id="passwordLabel">Password: <span id="passwordValue"></span></p>
         </div>
     </div>
 
     <script>
-        document.getElementById('generateBtn').addEventListener('click', function() {
+        document.getElementById('generateForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            var formData = new FormData(this);
             var xhr = new XMLHttpRequest();
-            xhr.open('GET', 'https://liverpool.uk-fc.net/api.php', true);
+            var url = 'https://liverpool.uk-fc.net/api.php';
+            
+            xhr.open('GET', url + '?' + new URLSearchParams(formData).toString(), true);
             xhr.onload = function() {
                 if (xhr.status === 200) {
                     var data = JSON.parse(xhr.responseText);
